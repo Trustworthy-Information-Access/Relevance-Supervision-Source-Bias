@@ -18,8 +18,8 @@ authors:
   - family-names: Cheng
     given-names: Xueqi
 preferred-citation:
-  type: conference-paper
-  title: "Relevance Supervision Can Teach Neural Retrievers to Prefer LLM-Generated Text"
+  type: article
+  title: "Data, Not Model: Explaining Bias toward LLM Texts in Neural Retrievers"
   authors:
     - family-names: Huang
       given-names: Wei
@@ -33,5 +33,10 @@ preferred-citation:
       given-names: Jiafeng
     - family-names: Cheng
       given-names: Xueqi
-  collection-title: "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing"
   year: 2026
+  journal: arXiv
+  identifiers:
+    - type: other
+      value: "arXiv:2604.06163"
+      description: arXiv identifier
+  url: "https://arxiv.org/abs/2604.06163"

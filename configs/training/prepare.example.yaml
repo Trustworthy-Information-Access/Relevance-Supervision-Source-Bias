@@ -1,0 +1,10 @@
+data:
+  queries: /path/to/msmarco/queries.jsonl
+  hard_negatives: /path/to/msmarco/msmarco-hard-negatives.jsonl.gz
+
+output: outputs/training/training-plan-seed42.jsonl
+seed: 42
+epochs: 10
+batch_size: 75
+ce_score_margin: 3
+negatives_per_system: 5

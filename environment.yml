@@ -1,0 +1,10 @@
+name: relevance-source-bias
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - openjdk=11
+  - pip
+  - pip:
+      - -c requirements/constraints.txt
+      - -e .[models,dev,lucene]

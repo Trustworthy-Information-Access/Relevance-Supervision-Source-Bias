@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "relevance-source-bias"
+version = "1.0.0"
+description = "Reproduction code for analyzing source bias induced by relevance supervision"
+readme = "README.md"
+requires-python = ">=3.10,<3.12"
+license = {text = "Apache-2.0"}
+authors = [
+  {name = "Wei Huang"},
+  {name = "Keping Bi"},
+  {name = "Yinqiong Cai"},
+  {name = "Wei Chen"},
+  {name = "Jiafeng Guo"},
+  {name = "Xueqi Cheng"},
+]
+dependencies = [
+  "h5py>=3.8",
+  "numpy>=1.23",
+  "PyYAML>=6.0",
+  "scipy>=1.9",
+]
+
+[project.optional-dependencies]
+models = [
+  "sentence-transformers>=2.7,<6",
+  "torch>=2.0",
+  "transformers>=4.40,<5",
+]
+lucene = ["pyserini>=0.22,<0.25"]
+dev = ["pytest>=7,<10", "ruff>=0.4,<0.17"]
+all = [
+  "sentence-transformers>=2.7,<6",
+  "torch>=2.0",
+  "transformers>=4.40,<5",
+  "pyserini>=0.22,<0.25",
+]
+
+[project.scripts]
+rsb = "relevance_source_bias.cli.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+license-files = ["LICENSE", "NOTICE"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

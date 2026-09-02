@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/
+
+# Local inputs and generated artifacts
+data/
+datasets/
+checkpoints/
+outputs/
+results/
+embeddings/
+logs/
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.pt
+*.pth
+*.bin
+
+!tests/fixtures/**

@@ -1,0 +1,8 @@
+# Batch the other-query positive-pool negatives into the controlled plan format.
+data:
+  pairs: outputs/positive-pool/training-pairs.jsonl
+
+output: outputs/training/positive-pool-plan-seed42.jsonl
+seed: 42
+epochs: 10
+batch_size: 75

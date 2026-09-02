@@ -1,0 +1,17 @@
+# Cross-generator evaluation on the five datasets in the appendix.
+# Change this to the directory containing the dataset folders.
+data_root: /path/to/cocktail-qwen
+output_root: outputs/qwen
+
+sources:
+  - human
+  - qwen3-32b
+
+queries: queries.jsonl
+corpus_pattern: corpus/{source}.jsonl
+
+batch_size: 128
+top_k: 200
+corpus_batch_size: 50000
+device: cuda
+remove_self_matches: true

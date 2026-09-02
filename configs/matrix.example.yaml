@@ -1,0 +1,47 @@
+# Evaluation and model registry paths. Copy the evaluation template, change data_root,
+# and point this file at the resulting local configuration.
+evaluation_config: configs/evaluation.local.yaml
+models: configs/models.yaml
+
+datasets:
+  - msmarco
+  - dl19
+  - dl20
+  - trec-covid
+  - nfcorpus
+  - nq
+  - hotpotqa
+  - fiqa
+  - webis-touche2020
+  - dbpedia-entity
+  - scidocs
+  - fever
+  - climate-fever
+  - scifact
+
+retrievers:
+  - ance
+  - tas-b
+  - cocondenser
+  - retromae
+  - dragon
+  - bge
+  - bce
+  - gte
+  - e5
+  - m3e
+  - contriever
+  - e5-unsup
+  - simcse
+  # Seeded checkpoints can be registered with matching names and expanded as follows:
+  # - template: contriever-ft-seed{seed}
+  #   label: contriever-ft
+  #   seeds: [42, 100, 2026]
+
+qrels:
+  default: qrels/test.tsv
+  msmarco: qrels/dev.tsv
+
+k: [5]
+manifest: outputs/matrix-manifest.json
+aggregate_dir: outputs/aggregate

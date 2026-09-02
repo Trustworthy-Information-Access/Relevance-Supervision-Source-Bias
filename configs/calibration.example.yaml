@@ -1,0 +1,55 @@
+# Replace <model> and the root with the embedding paths produced by `rsb retrieve`.
+# MS MARCO, DL19, and DL20 share one collection and therefore form one group.
+suffixes:
+  human: -human
+  llm: -llama-2-7b-chat-tmp0.2
+
+groups:
+  msmarco-collection:
+    datasets: [msmarco, dl19, dl20]
+    human: /path/to/embeddings/msmarco/<model>/human.npz
+    llm: /path/to/embeddings/msmarco/<model>/llama-2-7b-chat-tmp0.2.npz
+  nq:
+    datasets: [nq]
+    human: /path/to/embeddings/nq/<model>/human.npz
+    llm: /path/to/embeddings/nq/<model>/llama-2-7b-chat-tmp0.2.npz
+  nfcorpus:
+    datasets: [nfcorpus]
+    human: /path/to/embeddings/nfcorpus/<model>/human.npz
+    llm: /path/to/embeddings/nfcorpus/<model>/llama-2-7b-chat-tmp0.2.npz
+  trec-covid:
+    datasets: [trec-covid]
+    human: /path/to/embeddings/trec-covid/<model>/human.npz
+    llm: /path/to/embeddings/trec-covid/<model>/llama-2-7b-chat-tmp0.2.npz
+  hotpotqa:
+    datasets: [hotpotqa]
+    human: /path/to/embeddings/hotpotqa/<model>/human.npz
+    llm: /path/to/embeddings/hotpotqa/<model>/llama-2-7b-chat-tmp0.2.npz
+  fiqa:
+    datasets: [fiqa]
+    human: /path/to/embeddings/fiqa/<model>/human.npz
+    llm: /path/to/embeddings/fiqa/<model>/llama-2-7b-chat-tmp0.2.npz
+  webis-touche2020:
+    datasets: [webis-touche2020]
+    human: /path/to/embeddings/webis-touche2020/<model>/human.npz
+    llm: /path/to/embeddings/webis-touche2020/<model>/llama-2-7b-chat-tmp0.2.npz
+  dbpedia-entity:
+    datasets: [dbpedia-entity]
+    human: /path/to/embeddings/dbpedia-entity/<model>/human.npz
+    llm: /path/to/embeddings/dbpedia-entity/<model>/llama-2-7b-chat-tmp0.2.npz
+  scidocs:
+    datasets: [scidocs]
+    human: /path/to/embeddings/scidocs/<model>/human.npz
+    llm: /path/to/embeddings/scidocs/<model>/llama-2-7b-chat-tmp0.2.npz
+  fever:
+    datasets: [fever]
+    human: /path/to/embeddings/fever/<model>/human.npz
+    llm: /path/to/embeddings/fever/<model>/llama-2-7b-chat-tmp0.2.npz
+  climate-fever:
+    datasets: [climate-fever]
+    human: /path/to/embeddings/climate-fever/<model>/human.npz
+    llm: /path/to/embeddings/climate-fever/<model>/llama-2-7b-chat-tmp0.2.npz
+  scifact:
+    datasets: [scifact]
+    human: /path/to/embeddings/scifact/<model>/human.npz
+    llm: /path/to/embeddings/scifact/<model>/llama-2-7b-chat-tmp0.2.npz

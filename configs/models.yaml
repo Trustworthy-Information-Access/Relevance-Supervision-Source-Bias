@@ -1,0 +1,61 @@
+# Checkpoints and role-specific text transforms used in the paper.
+models:
+  # Query and passage lengths default to 32 and 512 tokens, respectively.
+  # Relevance-supervised retrievers
+  ance:
+    model: sentence-transformers/msmarco-roberta-base-ance-firstp
+    score_function: dot
+  tas-b:
+    model: sentence-transformers/msmarco-distilbert-base-tas-b
+    score_function: dot
+  cocondenser:
+    model: sentence-transformers/msmarco-bert-co-condensor
+    score_function: dot
+  retromae:
+    model: nthakur/RetroMAE_BEIR
+    score_function: dot
+  dragon:
+    query_model: nthakur/dragon-plus-query-encoder
+    document_model: nthakur/dragon-plus-context-encoder
+    score_function: dot
+
+  # General-purpose embedding models
+  bge:
+    model: BAAI/bge-base-en-v1.5
+    query_prefix: "Represent this sentence for searching relevant passages: "
+    score_function: dot
+  bce:
+    model: maidalun1020/bce-embedding-base_v1
+    score_function: dot
+  gte:
+    model: thenlper/gte-base
+    score_function: dot
+  e5:
+    model: intfloat/e5-base-v2
+    query_prefix: "query: "
+    passage_prefix: "passage: "
+    normalize_embeddings: true
+    score_function: dot
+  m3e:
+    model: moka-ai/m3e-base
+    score_function: dot
+
+  # Unsupervised retrievers
+  contriever:
+    model: nishimoto/contriever-sentencetransformer
+    score_function: dot
+  e5-unsup:
+    model: intfloat/e5-base-unsupervised
+    query_prefix: "query: "
+    passage_prefix: "passage: "
+    normalize_embeddings: true
+    score_function: dot
+  simcse:
+    model: princeton-nlp/unsup-simcse-bert-base-uncased
+    score_function: cosine
+
+  # Appendix: DPR trained solely on Natural Questions.
+  dpr-nq:
+    query_model: sentence-transformers/facebook-dpr-question_encoder-single-nq-base
+    document_model: sentence-transformers/facebook-dpr-ctx_encoder-single-nq-base
+    score_function: dot

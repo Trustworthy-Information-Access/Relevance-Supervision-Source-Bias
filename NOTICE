@@ -1,0 +1,15 @@
+Relevance Supervision Can Teach Neural Retrievers to Prefer LLM-Generated Text
+Copyright 2026 Wei Huang et al.
+
+Portions of the controlled retrieval training implementation are adapted from
+the Apache-2.0-licensed BEIR and SentenceTransformers projects. Their notices
+are reproduced below.
+
+BEIR
+Copyright since 2022 University of Waterloo
+Copyright since 2020 Ubiquitous Knowledge Processing (UKP) Lab,
+Technische Universitaet Darmstadt
+
+SentenceTransformers
+Copyright 2019 Ubiquitous Knowledge Processing (UKP) Lab,
+Technische Universitaet Darmstadt

@@ -1,0 +1,26 @@
+# Replace <model> and the root with embeddings produced from the Qwen evaluation config.
+suffixes:
+  human: -human
+  llm: -qwen3-32b
+
+groups:
+  msmarco:
+    datasets: [msmarco]
+    human: /path/to/embeddings/msmarco/<model>/human.npz
+    llm: /path/to/embeddings/msmarco/<model>/qwen3-32b.npz
+  trec-covid:
+    datasets: [trec-covid]
+    human: /path/to/embeddings/trec-covid/<model>/human.npz
+    llm: /path/to/embeddings/trec-covid/<model>/qwen3-32b.npz
+  nq:
+    datasets: [nq]
+    human: /path/to/embeddings/nq/<model>/human.npz
+    llm: /path/to/embeddings/nq/<model>/qwen3-32b.npz
+  fiqa:
+    datasets: [fiqa]
+    human: /path/to/embeddings/fiqa/<model>/human.npz
+    llm: /path/to/embeddings/fiqa/<model>/qwen3-32b.npz
+  scidocs:
+    datasets: [scidocs]
+    human: /path/to/embeddings/scidocs/<model>/human.npz
+    llm: /path/to/embeddings/scidocs/<model>/qwen3-32b.npz

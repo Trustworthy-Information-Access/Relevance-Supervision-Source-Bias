@@ -1,0 +1,15 @@
+# Paired LH embeddings for one retriever. Add all 14 dataset-level collections.
+suffixes:
+  left: -human
+  right: -llama-2-7b-chat-tmp0.2
+
+# The fixed MS MARCO positive-minus-negative direction produced by `rsb direction`.
+reference: /path/to/outputs/msmarco/dragon/pn-direction.json
+
+datasets:
+  msmarco:
+    left: /path/to/outputs/msmarco/dragon/human.npz
+    right: /path/to/outputs/msmarco/dragon/llama-2-7b-chat-tmp0.2.npz
+  scifact:
+    left: /path/to/outputs/scifact/dragon/human.npz
+    right: /path/to/outputs/scifact/dragon/llama-2-7b-chat-tmp0.2.npz

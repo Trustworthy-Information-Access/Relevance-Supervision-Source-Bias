@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "Relevance Supervision Can Teach Neural Retrievers to Prefer LLM-Generated Text"
+type: software
+version: 1.0.0
+date-released: 2026-08-31
+authors:
+  - family-names: Huang
+    given-names: Wei
+  - family-names: Bi
+    given-names: Keping
+  - family-names: Cai
+    given-names: Yinqiong
+  - family-names: Chen
+    given-names: Wei
+  - family-names: Guo
+    given-names: Jiafeng
+  - family-names: Cheng
+    given-names: Xueqi
+preferred-citation:
+  type: conference-paper
+  title: "Relevance Supervision Can Teach Neural Retrievers to Prefer LLM-Generated Text"
+  authors:
+    - family-names: Huang
+      given-names: Wei
+    - family-names: Bi
+      given-names: Keping
+    - family-names: Cai
+      given-names: Yinqiong
+    - family-names: Chen
+      given-names: Wei
+    - family-names: Guo
+      given-names: Jiafeng
+    - family-names: Cheng
+      given-names: Xueqi
+  collection-title: "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing"
+  year: 2026

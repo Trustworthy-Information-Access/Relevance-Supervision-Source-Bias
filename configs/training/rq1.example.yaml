@@ -1,0 +1,28 @@
+# RQ1: fine-tune an unsupervised encoder with the standard contrastive objective.
+data:
+  corpus: /path/to/msmarco/corpus.jsonl
+  queries: /path/to/msmarco/queries.jsonl
+  plan: outputs/training/training-plan-seed42.jsonl
+
+# Contriever. For E5-unsup, use mean pooling and the query/passage prefixes below.
+# For SimCSE, use princeton-nlp/unsup-simcse-bert-base-uncased with cls pooling.
+model_name: nishimoto/contriever-sentencetransformer
+pooling: mean
+load_as_sentence_transformer: false
+query_prefix: ""
+passage_prefix: ""
+
+negative_strategy: standard
+similarity: dot
+scale: 1
+max_sequence_length: 512
+include_title: false
+
+learning_rate: 0.00002
+warmup_steps: 1000
+use_amp: true
+seed: 42
+num_workers: 0
+checkpoint_steps: 6653
+checkpoint_limit: 2
+output: outputs/training/contriever-ft-seed42

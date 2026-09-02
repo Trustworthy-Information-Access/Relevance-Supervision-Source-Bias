@@ -1,0 +1,16 @@
+data:
+  corpus: /path/to/msmarco/corpus.jsonl
+  queries: /path/to/msmarco/queries.jsonl
+  plan: outputs/training/training-plan-seed42.jsonl
+model_name: bert-base-uncased
+pooling: cls
+negative_strategy: in_batch_only
+similarity: cosine
+scale: 20
+max_sequence_length: 512
+learning_rate: 0.00002
+warmup_steps: 1000
+use_amp: true
+seed: 42
+checkpoint_steps: 6653
+output: outputs/training/bert-in-batch-only-seed42

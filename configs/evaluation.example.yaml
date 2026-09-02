@@ -1,0 +1,16 @@
+# Change this to the directory containing the dataset folders.
+data_root: /path/to/cocktail
+output_root: outputs
+
+sources:
+  - human
+  - llama-2-7b-chat-tmp0.2
+
+queries: queries.jsonl
+corpus_pattern: corpus/{source}.jsonl
+
+batch_size: 128
+top_k: 200
+corpus_batch_size: 50000
+device: cuda
+remove_self_matches: true

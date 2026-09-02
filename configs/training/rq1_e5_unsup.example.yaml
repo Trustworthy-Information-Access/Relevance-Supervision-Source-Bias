@@ -1,0 +1,26 @@
+# RQ1: relevance fine-tuning of E5-unsup with the standard contrastive objective.
+data:
+  corpus: /path/to/msmarco/corpus.jsonl
+  queries: /path/to/msmarco/queries.jsonl
+  plan: outputs/training/training-plan-seed42.jsonl
+
+model_name: intfloat/e5-base-unsupervised
+pooling: mean
+load_as_sentence_transformer: false
+query_prefix: "query: "
+passage_prefix: "passage: "
+
+negative_strategy: standard
+similarity: dot
+scale: 1
+max_sequence_length: 512
+include_title: false
+
+learning_rate: 0.00002
+warmup_steps: 1000
+use_amp: true
+seed: 42
+num_workers: 0
+checkpoint_steps: 6653
+checkpoint_limit: 2
+output: outputs/training/e5-unsup-ft-seed42

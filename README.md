@@ -1,9 +1,9 @@
 # Relevance Supervision Can Teach Neural Retrievers to Prefer LLM-Generated Text
 
-This repository contains the implementation accompanying our
-[arXiv preprint](https://arxiv.org/abs/2604.06163), **“Data, Not Model: Explaining Bias
-toward LLM Texts in Neural Retrievers.”** It covers the three experimental threads in
-the paper:
+This repository contains the implementation for our paper, **“Relevance Supervision Can
+Teach Neural Retrievers to Prefer LLM-Generated Text,”** accepted to Findings of EMNLP
+2026. The preprint is available on [arXiv](https://arxiv.org/abs/2604.06163). It covers
+the three experimental threads in the paper:
 
 1. evaluating source preference with $\Delta\mathrm{NDSR}@k$ and retrieval quality;
 2. analyzing PPL/IDF artifacts and embedding-space directions; and
@@ -410,8 +410,9 @@ pytest
 ## Citation
 
 ```bibtex
-@misc{huang2026datamodelexplainingbias,
-  title = {Data, Not Model: Explaining Bias toward LLM Texts in Neural Retrievers},
+@misc{huang2026relevance,
+  title = {Relevance Supervision Can Teach Neural Retrievers to Prefer
+           {LLM}-Generated Text},
   author = {Wei Huang and Keping Bi and Yinqiong Cai and Wei Chen and
             Jiafeng Guo and Xueqi Cheng},
   year = {2026},

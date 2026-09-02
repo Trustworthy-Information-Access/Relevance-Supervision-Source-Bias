@@ -19,7 +19,7 @@ authors:
     given-names: Xueqi
 preferred-citation:
   type: article
-  title: "Data, Not Model: Explaining Bias toward LLM Texts in Neural Retrievers"
+  title: "Relevance Supervision Can Teach Neural Retrievers to Prefer LLM-Generated Text"
   authors:
     - family-names: Huang
       given-names: Wei
